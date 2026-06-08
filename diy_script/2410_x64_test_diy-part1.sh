@@ -48,3 +48,6 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages package/passwal
 
 # 添加 poweroffdevice
 git clone https://github.com/sirpdboy/luci-app-poweroffdevice.git package/luci-app-poweroffdevice
+
+# 添加 easytier
+git clone https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
