@@ -15,14 +15,13 @@ sed -i '/helloworld/d' feeds.conf.default
 sed -i '/small/d' feeds.conf.default
 sed -i '/passwall/d' feeds.conf.default
 sed -i '2i src-git small https://github.com/kenzok8/small' feeds.conf.default
-sed -i '$a src-git istore https://github.com/linkease/istore;main' feeds.conf.default
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 sed -i '$a src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git;main' feeds.conf.default
 sed -i '$a src-git passwall_luci https://github.com/Openwrt-Passwall/openwrt-passwall.git;main' feeds.conf.default
 sed -i '$a src-git openclaw https://github.com/10000ge10000/luci-app-openclaw.git;main' feeds.conf.default
 
 # 添加 adguardHome
-git clone --depth=1 --single-branch https://github.com/sirpdboy/luci-app-adguardhome.git
+git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 
 # 添加 argon 主题
 rm -rf feeds/luci/themes/luci-theme-argon
@@ -48,3 +47,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages package/passwal
 
 # 添加 poweroffdevice
 git clone https://github.com/sirpdboy/luci-app-poweroffdevice.git package/luci-app-poweroffdevice
+
+# 添加 istore
+git clone https://github.com/linkease/istore-ui package/luci-app-store-ui
+git clone https://github.com/linkease/istore package/luci-app-store
